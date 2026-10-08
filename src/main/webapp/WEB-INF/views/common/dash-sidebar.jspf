@@ -1,0 +1,28 @@
+<%-- Dashboard sidebar shared by user and admin pages.
+     Set <c:set var="activeNav" value="overview|add|pending|users"> before including to highlight a link. --%>
+<aside class="dash-sidebar">
+  <div class="dash-profile d-none d-lg-flex">
+    <span class="nav-avatar dash-avatar"><c:out value="${fn:toUpperCase(fn:substring(sessionScope.user.name, 0, 1))}" /></span>
+    <div class="text-truncate">
+      <div class="fw-semibold text-truncate"><c:out value="${sessionScope.user.name}" /></div>
+      <span class="badge ${sessionScope.user.role == 'ADMIN' ? 'text-bg-dark' : 'text-bg-secondary'}">${sessionScope.user.role}</span>
+    </div>
+  </div>
+
+  <nav class="dash-nav">
+    <c:choose>
+      <c:when test="${sessionScope.user.role == 'ADMIN'}">
+        <a class="dash-link ${activeNav == 'overview' ? 'active' : ''}" href="${ctx}/admin/dashboard"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a>
+        <a class="dash-link ${activeNav == 'pending' ? 'active' : ''}" href="${ctx}/admin/dashboard#pending"><i class="bi bi-hourglass-split"></i><span>Approvals</span>
+          <c:if test="${not empty pendingCount and pendingCount > 0}"><em class="dash-badge">${pendingCount}</em></c:if></a>
+        <a class="dash-link ${activeNav == 'users' ? 'active' : ''}" href="${ctx}/admin/dashboard#users"><i class="bi bi-people-fill"></i><span>Users</span></a>
+      </c:when>
+      <c:otherwise>
+        <a class="dash-link ${activeNav == 'overview' ? 'active' : ''}" href="${ctx}/user/dashboard"><i class="bi bi-grid-1x2-fill"></i><span>Overview</span></a>
+        <a class="dash-link ${activeNav == 'add' ? 'active' : ''}" href="${ctx}/user/add-recipe"><i class="bi bi-plus-circle-fill"></i><span>Share a recipe</span></a>
+      </c:otherwise>
+    </c:choose>
+    <a class="dash-link" href="${ctx}/recipes"><i class="bi bi-compass-fill"></i><span>Browse recipes</span></a>
+    <a class="dash-link dash-logout" href="${ctx}/logout"><i class="bi bi-box-arrow-right"></i><span>Logout</span></a>
+  </nav>
+</aside>

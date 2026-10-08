@@ -1,0 +1,38 @@
+<%-- Shared footer; closes the <body> and <html> tags opened by header.jspf --%>
+<footer class="site-footer mt-auto">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-5">
+        <h5 class="text-white d-flex align-items-center gap-2 mb-3">
+          <span class="brand-icon" style="width:34px;height:34px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff922b,#c2410c);color:#fff"><i class="bi bi-egg-fried"></i></span>
+          RecipeShare
+        </h5>
+        <p class="mb-0">A community for home cooks to share, discover and save the recipes they love. Cook it, share it, love it.</p>
+      </div>
+      <div class="col-6 col-md-3 offset-md-1">
+        <h6>Explore</h6>
+        <ul>
+          <li><a href="${ctx}/home">Home</a></li>
+          <li><a href="${ctx}/recipes">Browse recipes</a></li>
+          <li><a href="${ctx}/register">Join us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6>Account</h6>
+        <ul>
+          <li><a href="${ctx}/login">Log in</a></li>
+          <li><a href="${ctx}/user/add-recipe">Share a recipe</a></li>
+          <li><a href="${ctx}/user/dashboard">My dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-1">
+      <span>&copy; RecipeShare. Live Project #7.</span>
+      <span>Built with Java Servlets, JSP, JDBC &amp; MySQL</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="${ctx}/js/app.js"></script>
+</body>
+</html>
