@@ -3,8 +3,16 @@
 A full-stack Java web application designed with MVC architecture, JDBC connectivity, and MySQL persistence for community-driven culinary discovery and recipe management.
 
 Developed for **GUVI - Galgotias Project Board 3rd Sem (Review 1)**  
-**Student:** Sachin (25SCSE1410011)  
-**Team:** Team E, Galgotias University  
+**Team Name:** Team E  
+**Institution:** Galgotias University, Greater Noida  
+**Department:** B.Tech Computer Science & Engineering (3rd Semester)  
+
+### 👥 Team E Members
+| Name | Roll / Admission No. | Official Email | Role |
+| :--- | :--- | :--- | :--- |
+| **Rashika** | 25SCSE1410104 | rashika.25scse1410104@galgotiasuniversity.ac.in | Team Lead (Admin) |
+| **Ritik Kumar** | 25SCSE1410186 | ritik.25scse1410186@galgotiasuniversity.ac.in | Team Member |
+| **Sachin Kumar** | 25SCSE1410011 | sachin.25scse1410011@galgotiasuniversity.ac.in | Team Member |
 
 ## Tech Stack
 - **Java 17** • Servlets • JSP (with JSTL)
